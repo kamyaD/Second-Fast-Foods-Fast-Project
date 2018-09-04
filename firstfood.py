@@ -7,7 +7,13 @@ orders = [{'name':'cofee'}, {'name':'Beaf'}]
 def welcome():
     return render_template("welcome.html")
 
+@app.route('/v1/order', methods=['GET'])
+def getOrders():
+    return jsonify({'message' : 'Itworks!'})
 
+@app.route('/v1/all_orders', methods=['GET'])
+def returnAll():
+    return jsonify({'orders': orders})
 
 if __name__ == '__main__':
     app.run(debug=True)
