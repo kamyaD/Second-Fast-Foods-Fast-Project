@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Fast-Food-Fast</title>
+        <link href="static/css/style.css" rel="stylesheet">
+        <script src="static/script/script.js"></script>
+    <head>
+    <body>
+        <div  class="main-signup">
+            <h1>Fast Foods Fast</h1>
+            <img src="static/images/title.jpg" width="400px" alt="logo">
+            <div>
+                <ul>
+                    <li><a href="/">Home</a></li>                     
+                    <li><a href="#">User</a></li>
+                    <li><a href="#">Admin</a></li>
+                    <li><a href="/login">Login</a></li> 
+                </ul>
+                {% for message in get_flashed_messages() %}
+                        {{ message }}
+                    {% endfor %}
+            </div> 
+        </div>
+    </body>
+</html>
