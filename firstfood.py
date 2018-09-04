@@ -7,7 +7,7 @@ orders = [{'name':'coffee'}, {'name':'Beaf'}]
 def welcome():
     return render_template("welcome.html")
 
-@app.route('/v1/order', methods=['GET'])
+@app.route('/v1/order', methods=['GET']) #Testing the jsonify out put on a browser
 def getOrders():
     return jsonify({'message' : 'Itworks!'})
 
@@ -19,6 +19,15 @@ def returnAll():
 def returnOne(name):
     ords=[order for order in orders if order['name']== name]
     return jsonify({'order' : ords[0]})
+
+@app.route('/v1/all_orders', methods=['POST']) # 
+def addOrder():
+    order = request.get_json('name')
+
+    orders.append(order)
+    return jsonify({'orders' : orders})
+
+
 
 
 
