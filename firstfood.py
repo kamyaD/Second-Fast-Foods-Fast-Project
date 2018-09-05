@@ -3,7 +3,7 @@ from flask import Flask, render_template, jsonify, request #import objects from 
 app = Flask(__name__, template_folder='v1') #define app and telling flask that template folder is named v1
 orders = [{'name':'coffee'}, {'name':'Beaf'},{'name' : 'Milk'}]
 
-@app.route('/api/v1')
+@app.route('/v1')
 def welcome():
     return render_template("welcome.html")
 
