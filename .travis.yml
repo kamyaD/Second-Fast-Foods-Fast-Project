@@ -6,4 +6,4 @@ python:
 
 script: 
 
-  - firstfood_test.py
+  - firstfood.py
