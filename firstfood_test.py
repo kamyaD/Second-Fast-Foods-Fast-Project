@@ -1,12 +1,12 @@
 import unittest
-from  firstfood import returnAll
+from firstfood import *
+from flask import jsonify
 
 class test_odres_returnAll(unittest.TestCase):
     def test_return_all_orders(self):
-        self.assertEqual(returnAll("johndoe", "johndoe")"johndoe", "johndoe")
-     
-    
-
+        response = self.getOrders()
+        result = jsonify({'message' : 'Itworks!'})
+        self.assertEqual(response, result)
 
 if __name__ == '__main__':
     unittest.main()
