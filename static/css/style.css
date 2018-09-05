@@ -26,6 +26,15 @@ img{
     padding-bottom: 1px;
     background-color: antiquewhite;    
   }
+
+.content{
+    font-style: inherit
+    text-align: left;
+    padding-left: 30%;
+    padding-bottom: 1px;
+    background-color: antiquewhite;    
+}
+
 ul {
     list-style-type: none;
     margin: 0;
