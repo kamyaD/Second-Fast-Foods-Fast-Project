@@ -1,7 +1,7 @@
 from flask import Flask, render_template, jsonify, request #import objects from the Flask model
 
 app = Flask(__name__, template_folder='v1') #define app and telling flask that template folder is named v1
-orders = [{'name':'coffee'}, {'name':'Beaf'},{'name' : 'Milk'}]
+orders = [{'name':'coffee'}, {'name':'Beaf'},{'name' : 'Milk'}] # Making a Dictionary of orders that is to be used to test the code
 
 @app.route('/v1')
 def welcome():
