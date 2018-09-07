@@ -12,7 +12,7 @@ This project was created as a way to save time spent on long ques at restaurants
 
 ## Screen Shots:
 
-![Alt text](Second-Fast-Foods-Fast-Project/static/images/All_orders.jpg "All_Orders")
+![Alt text](Second-Fast-Foods-Fast-Project/static/images/All_orders.jpg?raw=true "All_Orders")
 
 ## Installation:
 1: Install Python 
