@@ -10,7 +10,7 @@ This project was created as a way to save time spent on long ques at restaurants
 [![Build Status](https://travis-ci.org/kamyaD/Second-Fast-Foods-Fast-Project.svg?branch=master)](https://travis-ci.org/kamyaD/Second-Fast-Foods-Fast-Project)
 ![Heroku](http://heroku-badge.herokuapp.com/?app=fast-foods-fast)
 
-##Installation:
+## Installation:
 1: Install Python 
 
 2: Install Virtual Environment
