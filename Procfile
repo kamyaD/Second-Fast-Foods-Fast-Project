@@ -1,1 +1,1 @@
-web: python firstfood.py runserver 0.0.0.0:$PORT 
+web: python firstfood:app runserver 0.0.0.0:$PORT 
