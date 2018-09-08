@@ -1,13 +1,15 @@
-from flask import Flask, render_template, jsonify, request 
+from firstfood import app 
 import unittest
-from  firstfood import returnAll
 
-class test_odres_returnAll(unittest.TestCase):
-    def test_return_all_orders(self):
-        all=self.returnAll().get(
-            '/api/v1/all_orders',
-            orders = [{'name':'coffee'}, {'name':'Beaf'},{'name' : 'Milk'}]) 
-        self.assertEqual(all.status_code, 200)
+class WelcomeTestCase(unittest.TestCase):
+    
+    #Ensure that flask is working
+    def welcome(self):
+        tester = app.test_client(self)
+        response = tester.get('/v1', content_type='html/text')
+        self.assertEqual(response.status_code, 200)
+        
+    
     
 
 
