@@ -8,7 +8,7 @@ This project was created as a way to save time spent on long ques at restaurants
 ## Build Status (Badges):
 
 [![Build Status](https://travis-ci.org/kamyaD/Second-Fast-Foods-Fast-Project.svg?branch=master)](https://travis-ci.org/kamyaD/Second-Fast-Foods-Fast-Project)
-![Heroku](http://heroku-badge.herokuapp.com/?app=fast-foods-fast)
+![Heroku](http://heroku-badge.herokuapp.com/?app=second-first-foods-first-proje)
 
 ## Screen Shots:
 
