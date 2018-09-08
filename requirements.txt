@@ -23,3 +23,4 @@ virtualenv-clone==0.3.0
 virtualenvwrapper-win==1.2.5
 Werkzeug==0.14.1
 wrapt==1.10.11
+gunicorn==19.9.0
