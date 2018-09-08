@@ -1,6 +1,7 @@
 # Second-First-Foods-First-Project
 Fast-Food-Fast is a food delivery service app for a restaurant. The second face of this project is a set of API endpoints used to store data structures in memory.
 
+
 ## Motivation
 
 This project was created as a way to save time spent on long ques at restaurants waiting to be served. This project therefore saves time in that the user can order for food at the convenience of his mobile phone, monitor the order and collect when his order is served.
@@ -9,6 +10,10 @@ This project was created as a way to save time spent on long ques at restaurants
 
 [![Build Status](https://travis-ci.org/kamyaD/Second-Fast-Foods-Fast-Project.svg?branch=master)](https://travis-ci.org/kamyaD/Second-Fast-Foods-Fast-Project)
 ![Heroku](http://heroku-badge.herokuapp.com/?app=second-first-foods-first-proje)
+
+## App URL on Heroku:
+
+https://second-first-foods-first-proje.herokuapp.com/v1
 
 ## Screen Shots:
 
