@@ -24,15 +24,33 @@ class WelcomeTestCase(unittest.TestCase):
             '/api/v1/all_orders', content_type='html/text')
         self.assertTrue(b'coffee' in response.data)
 
+    # Ensure that new order is created
     def test_addOrder(self):
         tester = app.test_client(self)
         self.orders = [{'name':'coffee'}, {'name':'Beaf'},{'name' : 'Milk'}]
         self.order= {'name':'Bread'}
         self.new_orders=orders.append(self.order)
-        
         response = tester.post(
-            '/api/v1/all_orders', data= self.new_orders)
+            '/api/v1/all_orders', data = self.new_orders)
         self.assertTrue(response.status_code, 201 )
+
+    
+    # Ensure status of an order is Updated
+    def test_editOrder(self):
+        tester = app.test_client(self)
+        self.orders = [{'name':'coffee'}, {'name':'Beaf'},{'name' : 'Milk'}]
+        self.order= {'name':'Tea'}
+        self.new_orders= [order for order in orders if order['name']== ['coffee']]
+        self.orders[0]['name'] = self.order
+        response = tester.put(
+            '/api/v1/all_orders' , data = self.new_orders)
+        self.assertTrue(response.status_code, 201)
+
+    
+        
+
+
+    
 
         
 if __name__ == '__main__':
