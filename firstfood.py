@@ -23,7 +23,6 @@ def returnOne(name):
 @app.route('/api/v1/all_orders', methods=['POST']) # Places a new Order
 def addOrder():
     order = request.get_json('name')
-
     orders.append(order)
     return jsonify({'orders' : orders})
 
