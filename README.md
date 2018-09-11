@@ -8,7 +8,7 @@ This project was created as a way to save time spent on long ques at restaurants
 
 ## Build Status (Badges):
 
-[![Build Status](https://travis-ci.org/kamyaD/Second-Fast-Foods-Fast-Project.svg?branch=master)](https://travis-ci.org/kamyaD/Second-Fast-Foods-Fast-Project) [![Heroku App Status](http://heroku-shields.herokuapp.com/second-first-foods-first-proje)](https://second-first-foods-first-proje.herokuapp.com/v1)
+[![Build Status](https://travis-ci.org/kamyaD/Second-Fast-Foods-Fast-Project.svg?branch=master)](https://travis-ci.org/kamyaD/Second-Fast-Foods-Fast-Project) [![Heroku App Status](http://heroku-shields.herokuapp.com/second-first-foods-first-proje)](https://second-first-foods-first-proje.herokuapp.com/v1) [![pivotaltracker App Status](https://www.pivotaltracker.com/n/projects/2195274)
 
 ## App URL on Heroku:
 
