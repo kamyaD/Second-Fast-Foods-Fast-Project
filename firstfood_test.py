@@ -46,7 +46,7 @@ class WelcomeTestCase(unittest.TestCase):
             '/api/v1/all_orders' , data = self.new_orders)
         self.assertTrue(response.status_code, 201)
 
-    
+    # Ensure  an order is deleted
     def test_deleteOrder(self):
         tester = app.test_client(self)
         self.orders = [{'name':'coffee'}, {'name':'Beaf'},{'name' : 'Milk'}]
@@ -58,7 +58,7 @@ class WelcomeTestCase(unittest.TestCase):
         self.assertTrue(response.status_code, 200)
         self.assertEqual(self.new_orders,[{'name':'Beaf'},{'name' : 'Milk'}])
 
-        
+
 if __name__ == '__main__':
     unittest.main()
 
