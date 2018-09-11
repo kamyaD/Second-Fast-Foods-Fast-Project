@@ -1,4 +1,4 @@
-# Second-First-Foods-First-Project
+# Second-Farst-Foods-Farst-Project
 Fast-Food-Fast is a food delivery service app for a restaurant. The second face of this project is a set of API endpoints used to store data structures in memory.
 
 
