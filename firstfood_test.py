@@ -1,6 +1,7 @@
 from firstfood import app 
 from firstfood import orders
 import unittest
+import json
 
 class WelcomeTestCase(unittest.TestCase):
     
@@ -23,6 +24,17 @@ class WelcomeTestCase(unittest.TestCase):
             '/api/v1/all_orders', content_type='html/text')
         self.assertTrue(b'coffee' in response.data)
 
+    def test_addOrder(self):
+        tester = app.test_client(self)
+        self.orders = [{'name':'coffee'}, {'name':'Beaf'},{'name' : 'Milk'}]
+        self.order= {'name':'Bread'}
+        self.new_orders=orders.append(self.order)
+        
+        response = tester.post(
+            '/api/v1/all_orders', data= self.new_orders)
+        self.assertTrue(response.status_code, 201 )
 
+        
 if __name__ == '__main__':
     unittest.main()
+
