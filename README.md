@@ -15,6 +15,10 @@ This project was created as a way to save time spent on long ques at restaurants
 
 https://second-first-foods-first-proje.herokuapp.com/v1
 
+## Pivotaltracker Link:
+
+https://www.pivotaltracker.com/n/projects/2195274
+
 ## Screen Shots:
 
 https://github.com/kamyaD/Second-Fast-Foods-Fast-Project/issues/4#issue-358184124
