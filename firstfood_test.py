@@ -47,10 +47,16 @@ class WelcomeTestCase(unittest.TestCase):
         self.assertTrue(response.status_code, 201)
 
     
-        
-
-
-    
+    def test_deleteOrder(self):
+        tester = app.test_client(self)
+        self.orders = [{'name':'coffee'}, {'name':'Beaf'},{'name' : 'Milk'}]
+        self.new_orders=[order for order in orders if order['name']== ['coffee']]
+        self.orders.remove(self.orders[0])
+        return self.new_orders
+        response = tester.delete(
+            '/api/v1/all_orders' , data = self.new_orders)
+        self.assertTrue(response.status_code, 200)
+        self.assertEqual(self.new_orders,[{'name':'Beaf'},{'name' : 'Milk'}])
 
         
 if __name__ == '__main__':
