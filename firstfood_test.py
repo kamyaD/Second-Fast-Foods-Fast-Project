@@ -29,7 +29,6 @@ class WelcomeTestCase(unittest.TestCase):
         self.orders = [{'name':'coffee'}, {'name':'Beaf'},{'name' : 'Milk'}]
         self.order= {'name':'Bread'}
         self.new_orders=orders.append(self.order)
-        
         response = tester.post(
             '/api/v1/all_orders', data= self.new_orders)
         self.assertTrue(response.status_code, 201 )
