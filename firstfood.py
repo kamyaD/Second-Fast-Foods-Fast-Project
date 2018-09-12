@@ -19,6 +19,10 @@ def histry():
 def order():
     return render_template("order.html")
 
+@app.route('/v1/add_order')
+def add_order():
+    return render_template("add_order.html")
+
 @app.route('/api/v1/order', methods=['GET']) #Testing the jsonify out put on a browser
 def getOrders():
     return jsonify({'message' : 'Itworks!'})
