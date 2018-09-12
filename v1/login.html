@@ -36,11 +36,13 @@
                         </p>
                                         
                     </form>
+                    <center>
+            
                     {% if error %}
                         <p class="error"><strong>Error:</strong> {{ error }}
                     {% endif %}
                     <!-- flash messages for illegal axcess -->
-                    <center>
+                    
                         {% for message in get_flashed_messages() %}
                         {{ message }}
                     {% endfor %}
