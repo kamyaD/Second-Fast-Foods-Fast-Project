@@ -10,6 +10,10 @@ app.secret_key= "I love kenya"
 def welcome():
     return render_template("welcome.html")
 
+@app.route('/v1/histry')
+def histry():
+    return render_template("histry.html")
+
 
 @app.route('/v1/order')
 def order():
