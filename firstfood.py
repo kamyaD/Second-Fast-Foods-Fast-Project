@@ -8,7 +8,7 @@ app.secret_key= "I love kenya"
 
 @app.route('/v1')
 def welcome():
-    return render_template("welcome.html")
+    return render_template("welcome.html") 
 
 @app.route('/v1/histry')
 def histry():
@@ -54,7 +54,7 @@ def deleteOrder(name):
     orders.remove(delOrder[0])
     return jsonify({'orders': orders})
 
-@app.route('/v1/login', methods=['GET','POST'])
+@app.route('/v1/login', methods=['GET','POST']) # Login APIs
 def login():
     error = None
     if request.method == 'POST':
@@ -62,10 +62,15 @@ def login():
             error='Invalid credentials. Please try again.'
         else:
             session['logged_in'] = True
-            flash('You are now logged in!')
+            #flash('You are now logged in!')
             return redirect(url_for('order'))
     return render_template('login.html', error=error)
 
+@app.route('/v1/logout')
+def logout():
+    session.pop('logged_in',None)
+    flash('You are now  loged out!')
+    return redirect(url_for('login'))
 
 if __name__ == '__main__':
     app.run(debug=False)
