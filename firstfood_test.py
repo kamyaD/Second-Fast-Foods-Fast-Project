@@ -57,6 +57,16 @@ class WelcomeTestCase(unittest.TestCase):
             '/api/v1/all_orders' , data = self.new_orders)
         self.assertTrue(response.status_code, 200)
         self.assertEqual(self.new_orders,[{'name':'Beaf'},{'name' : 'Milk'}])
+    
+    def test_login(self):
+        tester = app.test_client(self)
+        response = tester.post(
+            '/v1/login',
+            data=dict(username="domnic", password="domnic"),
+            follow_redirects=True 
+        )
+        self.assertIn(b'Please Make your order', response.data)
+
 
 
 if __name__ == '__main__':

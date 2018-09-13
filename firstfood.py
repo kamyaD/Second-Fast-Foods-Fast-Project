@@ -58,7 +58,7 @@ def deleteOrder(name):
 def login():
     error = None
     if request.method == 'POST':
-        if request.form['username'] != 'admin' or request.form['password'] != 'admin':
+        if request.form['username'] != 'domnic' or request.form['password'] != 'domnic':
             error='Invalid credentials. Please try again.'
         else:
             session['logged_in'] = True
