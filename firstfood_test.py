@@ -22,7 +22,7 @@ class WelcomeTestCase(unittest.TestCase):
         tester = app.test_client(self)
         response = tester.get(
             '/api/v1/all_orders', content_type='html/text')
-        self.assertTrue(b'coffee' in response.data)
+        self.assertEqual(response.status_code, 200)
 
     # Ensure that new order is created
     def test_addOrder(self):
