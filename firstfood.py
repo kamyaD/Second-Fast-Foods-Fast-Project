@@ -8,7 +8,7 @@ app.secret_key= "I love kenya"
 
 @app.route('/v1')
 def welcome():
-    return render_template("welcome.html") 
+    return render_template("order.html") 
 
 @app.route('/v1/histry')
 def histry():
@@ -17,7 +17,7 @@ def histry():
 
 @app.route('/v1/order')
 def order():
-    return render_template("order.html")
+    return render_template("welcome.html")
 
 @app.route('/v1/add_order')
 def add_order():
