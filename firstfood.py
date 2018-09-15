@@ -54,7 +54,7 @@ def deleteOrder(name):
     orders.remove(delOrder[0])
     return jsonify({'orders': orders})
 
-@app.route('/v1/login', methods=['GET','POST']) # Login APIs
+@app.route('/v1/login', methods=['GET','POST']) # user Login APIs
 def login():
     error = None
     if request.method == 'POST':
@@ -63,6 +63,17 @@ def login():
         else:
             session['logged_in'] = True
             return redirect(url_for('histry'))
+    return render_template('login.html', error=error)
+
+@app.route('/v1/admin', methods=['GET','POST']) # admin Login APIs
+def admin():
+    error = None
+    if request.method == 'POST':
+        if request.form['username'] != 'admin' or request.form['password'] != 'admin':
+            error='Invalid credentials. Please try again.'
+        else:
+            session['logged_in'] = True
+            return redirect(url_for('add_order'))
     return render_template('login.html', error=error)
 
 @app.route('/v1/logout')
