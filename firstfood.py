@@ -15,7 +15,7 @@ def histry():
     return render_template("histry.html")
 
 
-@app.route('/v1/order')
+@app.route('/v1/signUp')
 def order():
     return render_template("welcome.html")
 
@@ -62,8 +62,7 @@ def login():
             error='Invalid credentials. Please try again.'
         else:
             session['logged_in'] = True
-            #flash('You are now logged in!')
-            return redirect(url_for('order'))
+            return redirect(url_for('histry'))
     return render_template('login.html', error=error)
 
 @app.route('/v1/logout')
