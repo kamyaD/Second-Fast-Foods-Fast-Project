@@ -1,4 +1,3 @@
-
 #import objects from the Flask model
 from flask import Flask, render_template, jsonify, request,session,flash,redirect,url_for 
 
