@@ -1,9 +1,9 @@
 from firstfood import app 
 from firstfood import orders
 import unittest
-import json
 
-class WelcomeTestCase(unittest.TestCase):
+
+class Welcome(unittest.TestCase):
     
     # Ensure that flask is working
     def test_welcome(self):
