@@ -60,9 +60,9 @@ def login():
     if request.method == 'POST':
         if request.form['username'] != 'domnic' or request.form['password'] != 'domnic':
             error='Invalid credentials. Please try again.'
+        
         else:
             session['logged_in'] = True
-            #flash('You are now logged in!')
             return redirect(url_for('order'))
     return render_template('login.html', error=error)
 
