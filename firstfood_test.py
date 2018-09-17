@@ -1,9 +1,10 @@
 from firstfood import app 
+from firstfood import orders
 import unittest
 
 
 class apiEndpoints(unittest.TestCase):
-    orders = [{'name':'coffee'}, {'name':'Beaf'},{'name' : 'Milk'}]
+    
     
     # Ensure that flask is working
     def test_welcome(self):
@@ -18,7 +19,7 @@ class apiEndpoints(unittest.TestCase):
         response = tester.get(
             '/api/v1/all_orders', content_type='html/text')
         self.assertEqual(response.status_code, 200)
-        self.assertDictEqual
+        
 
     # Ensure that new order is created
     def test_addOrder(self):
